@@ -1,4 +1,4 @@
-## What are some differences between interfaces and types in TypeScript?
+## Q: What are some differences between interfaces and types in TypeScript?
 ## Answer:
 ### ইন্টারফেস এবং টাইপের মধ্যে কিছু পার্থক্য রয়েছে। ইন্টারফেস শুধুমাত্র OBJECT এবং CLASS সাথে কাজ করতে পারে কিন্তু টাইপ যেকোনো Primitive এবং Non-primitive মানের সাথে কাজ করে।
 
@@ -22,7 +22,7 @@ const arr: number[] = [10, 20, 30];
 
 ```
 
-## Provide an example of using union and intersection types in TypeScript.
+## Q: Provide an example of using union and intersection types in TypeScript.
 ## Answer: 
 ### 1. union (|): এটি এক ধরণের জাভাস্ক্রিপ্টের OR (||) condition এর মতো। হয় এটা, নয় ওটা|
 
@@ -40,6 +40,8 @@ const print = (val: string | number) => {
 
 ```
 ### 2. intersection (&): এটি এক ধরণের জাভাস্ক্রিপ্টের (&&) condition এর মতো। দুই টাইপের সব property লাগবে|
+
+## Example:
 
 ```ts
 

@@ -11,9 +11,9 @@ const formatValue = (value) => {
         return !value;
     }
 };
-// console.log(formatValue(10));
-// console.log(formatValue(true));
-// console.log(formatValue('web developer'));
+formatValue('hello');
+formatValue(5);
+formatValue(true);
 const getLength = (value) => {
     if (typeof value === 'string') {
         return value.length;
@@ -22,9 +22,8 @@ const getLength = (value) => {
         return value.length;
     }
 };
-// console.log(getLength('web developer'));
-// console.log(getLength([10, 20, 50]));
-// console.log(getLength(['hello', 'hi']));
+getLength('typescript');
+getLength([10, 20, 30, 40]);
 class Person {
     name;
     age;
@@ -37,7 +36,9 @@ class Person {
     }
 }
 const person1 = new Person('John Doe', 30);
+person1.getDetails();
 const person2 = new Person('Alice', 25);
+person2.getDetails();
 const books = [
     { title: 'Book A', rating: 4.5 },
     { title: 'Book B', rating: 3.2 },
@@ -46,6 +47,7 @@ const books = [
 const filterByRating = (arr) => {
     return arr.filter((item) => item?.rating >= 4);
 };
+filterByRating(books);
 const users = [
     { id: 1, name: 'Rakib', email: 'rakib@example.com', isActive: true },
     { id: 2, name: 'Asha', email: 'asha@example.com', isActive: false },
@@ -54,6 +56,7 @@ const users = [
 const filterActiveUsers = (arr) => {
     return arr.filter((user) => user?.isActive === true);
 };
+filterActiveUsers(users);
 const myBook = {
     title: 'The Great Gatsby',
     author: 'F. Scott Fitzgerald',
@@ -64,13 +67,9 @@ const printBookDetails = (myBook) => {
     const { title, author, publishedYear, isAvailable } = myBook;
     return `Title: ${title}, Author: ${author}, Published: ${publishedYear}, Available: ${isAvailable}`;
 };
-// console.log(printBookDetails(myBook));
+printBookDetails(myBook);
 const array1 = [1, 2, 3, 4, 5];
 const array2 = [3, 4, 5, 6, 7];
-// const getUniqueValues = (arr1: number[], arr2: number[]): number[] => {
-//     const arr: number[] = [...arr1, ...arr2];
-//     return [...new Set(arr)];
-// }
 const getUniqueValues = (arr1, arr2) => {
     const result = [];
     for (let i = 0; i < arr1.length; i++) {
@@ -82,7 +81,7 @@ const getUniqueValues = (arr1, arr2) => {
             }
         }
         if (!found) {
-            result[result.length] = arr1[i];
+            result[result.length] = Number(arr1[i]);
         }
     }
     for (let i = 0; i < arr2.length; i++) {
@@ -94,17 +93,18 @@ const getUniqueValues = (arr1, arr2) => {
             }
         }
         if (!found) {
-            result[result.length] = arr2[i];
+            result[result.length] = Number(arr2[i]);
         }
     }
     return result;
 };
-console.log(getUniqueValues(array1, array2));
+getUniqueValues(array1, array2);
 const products = [
     { name: 'Pen', price: 10, quantity: 2 },
     { name: 'Notebook', price: 25, quantity: 3, discount: 10 },
     { name: 'Bag', price: 50, quantity: 1, discount: 20 },
 ];
+const p = [];
 const calculateTotalPrice = (products) => {
     let totalPrice = products.reduce((acc, item) => {
         const amountPerProduct = item.price * item.quantity;
@@ -117,5 +117,5 @@ const calculateTotalPrice = (products) => {
     }, 0);
     return totalPrice;
 };
-console.log(calculateTotalPrice(products));
+calculateTotalPrice(products);
 //# sourceMappingURL=solution.js.map
